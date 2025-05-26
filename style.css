@@ -1,9 +1,12 @@
+/* Importa as fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Fonte principal para o corpo do texto */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5; /* Light gray background */
+    background-color: #e6ffe6; /* Verde bem claro */
     color: #333;
 }
 
@@ -15,7 +18,7 @@ body {
 
 /* Header */
 header {
-    background-color: #28a745; /* Green header */
+    background-color: #28a745; /* Verde do cabeçalho */
     color: white;
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -38,6 +41,7 @@ header {
     text-decoration: none;
     font-size: 1.8em;
     font-weight: bold;
+    font-family: 'Playfair Display', serif; /* Fonte para o logo */
 }
 
 nav ul {
@@ -59,20 +63,21 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #d4edda; /* Lighter green on hover */
+    color: #d4edda; /* Verde mais claro no hover */
 }
 
 /* Hero Section */
 .hero-section {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(to bottom, #d4edda, #f0f2f5); /* Green gradient */
+    background: linear-gradient(to bottom, #c6f6d5, #e6ffe6); /* Gradiente suave com o verde claro */
     border-bottom: 1px solid #ccc;
 }
 
 .hero-section h1 {
-    color: #28a745;
-    font-size: 3em;
+    font-family: 'Playfair Display', serif; /* Fonte para o título principal */
+    color: #28a745; /* Verde do título */
+    font-size: 3.2em; /* Um pouco maior */
     margin-bottom: 20px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
@@ -87,7 +92,7 @@ nav ul li a:hover {
 .image-wrapper {
     margin: 30px auto;
     text-align: center;
-    max-width: 700px; /* Limit image width */
+    max-width: 700px; /* Limite a largura da imagem */
 }
 
 .image-wrapper img {
@@ -115,23 +120,24 @@ nav ul li a:hover {
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.content-section:nth-of-type(even) { /* Alternate background for readability */
+.content-section:nth-of-type(even) { /* Fundo alternado para legibilidade */
     background-color: #f9f9f9;
 }
 
 .content-section h2 {
-    color: #007bff; /* Blue for section titles */
+    font-family: 'Playfair Display', serif; /* Fonte para os títulos das seções */
+    color: #007bff; /* Azul para os títulos das seções */
     font-size: 2.5em;
     text-align: center;
     margin-bottom: 30px;
     padding-bottom: 10px;
     border-bottom: 2px solid #007bff;
-    display: inline-block; /* To make border-bottom only under text */
+    display: inline-block; /* Para que a borda fique apenas sob o texto */
     text-align: center;
     width: auto;
 }
 
-/* To center the H2 and its border */
+/* Para centralizar o H2 e sua borda */
 .content-section .container {
     display: flex;
     flex-direction: column;
@@ -140,15 +146,15 @@ nav ul li a:hover {
 
 .info-block {
     margin-bottom: 25px;
-    text-align: left; /* Align text within info blocks to the left */
-    width: 100%; /* Take full width of container */
+    text-align: left; /* Alinhar o texto dentro dos blocos de informação à esquerda */
+    width: 100%; /* Ocupar a largura total do container */
 }
 
 .info-block h3 {
-    color: #6c757d; /* Grayish color for subtitles */
+    color: #6c757d; /* Cor cinza para os subtítulos */
     font-size: 1.4em;
     margin-bottom: 8px;
-    border-left: 4px solid #ffc107; /* Amber border for distinction */
+    border-left: 4px solid #ffc107; /* Borda âmbar para distinção */
     padding-left: 10px;
 }
 
@@ -160,7 +166,7 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #343a40; /* Dark gray footer */
+    background-color: #343a40; /* Rodapé cinza escuro */
     color: white;
     text-align: center;
     padding: 20px 0;
