@@ -1,77 +1,173 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 0;
+    background-color: #f0f2f5; /* Light gray background */
     color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Aligns content to the top */
-    min-height: 100vh; /* Ensures content takes at least the full viewport height */
 }
 
 .container {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* Adjust as needed */
-    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #28a745; /* Green header */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d4edda; /* Lighter green on hover */
+}
+
+/* Hero Section */
+.hero-section {
     text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #d4edda, #f0f2f5); /* Green gradient */
+    border-bottom: 1px solid #ccc;
 }
 
-h1 {
-    color: #4CAF50; /* Green color for the title */
-    margin-bottom: 5px;
-    font-size: 2.5em;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-.container > p { /* Targets the paragraph directly under container */
-    font-style: italic;
-    color: #666;
+.hero-section h1 {
+    color: #28a745;
+    font-size: 3em;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.hero-section .intro-text {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: #555;
 }
 
 .image-wrapper {
-    margin: 20px 0;
+    margin: 30px auto;
     text-align: center;
+    max-width: 700px; /* Limit image width */
 }
 
 .image-wrapper img {
     max-width: 100%;
     height: auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .image-caption {
     font-style: italic;
-    color: #555;
-    margin-top: 5px;
+    color: #666;
+    margin-top: 10px;
     font-weight: bold;
+    font-size: 0.95em;
 }
 
-.content {
-    text-align: left; /* Align text content to the left */
+/* Content Sections */
+.content-section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.content-section:nth-of-type(even) { /* Alternate background for readability */
+    background-color: #f9f9f9;
+}
+
+.content-section h2 {
+    color: #007bff; /* Blue for section titles */
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block; /* To make border-bottom only under text */
+    text-align: center;
+    width: auto;
+}
+
+/* To center the H2 and its border */
+.content-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-block {
+    margin-bottom: 25px;
+    text-align: left; /* Align text within info blocks to the left */
+    width: 100%; /* Take full width of container */
+}
+
+.info-block h3 {
+    color: #6c757d; /* Grayish color for subtitles */
+    font-size: 1.4em;
+    margin-bottom: 8px;
+    border-left: 4px solid #ffc107; /* Amber border for distinction */
+    padding-left: 10px;
+}
+
+.info-block p {
+    color: #444;
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Dark gray footer */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
     margin-top: 30px;
 }
 
-h2 {
-    color: #FFC107; /* Amber color for "Campo" title */
-    margin-top: 20px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
-    font-size: 1.8em;
-}
-
-h3 {
-    color: #795548; /* Brownish color for subtitles */
-    margin-top: 15px;
-    font-size: 1.2em;
-}
-
-p {
-    margin-bottom: 10px;
+footer p {
+    margin: 0;
+    font-size: 0.9em;
 }
